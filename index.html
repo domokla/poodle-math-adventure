@@ -12,6 +12,7 @@
 @media(max-width:680px){.app-shell{width:min(100% - 22px,500px);padding-top:15px}.topbar{margin:0 4px 13px}.level-pill{font-size:10px;padding:8px 10px}.game-card{border-radius:22px}.intro{grid-template-columns:1fr;min-height:0;padding:28px 25px 14px}.intro-copy{text-align:center}.intro h1{font-size:34px}.lead{margin:12px auto 14px}.rules{justify-content:center}.friends{height:190px;margin-top:2px}.sun-disc{right:calc(50% - 95px);width:175px;height:175px}.friend-poodle{font-size:126px}.friend-parrot{font-size:76px;margin-left:-14px}.poodle-label{left:28%;bottom:1px}.parrot-label{right:20%;bottom:35px}.play-area{padding:16px 20px 18px;min-height:210px}.start-panel{grid-template-columns:46px 1fr;gap:11px;padding:16px;min-height:0}.start-icon{width:42px;height:42px;font-size:21px}.start-panel h2{font-size:16px}.start-panel p{font-size:11px}.start-panel .primary-button{grid-column:1/-1;width:100%}.question{font-size:36px;gap:9px}.answer-wrap{width:65px;height:53px}.result-panel{grid-template-columns:45px 1fr}.result-emoji{width:40px;height:40px}.reward{grid-column:1/-1}.result-actions{grid-column:1/-1}.result-actions button{width:100%}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
 
+  .intro{min-height:245px;padding-top:25px;padding-bottom:20px}.intro .eyebrow{margin-bottom:7px}.intro h1{font-size:43px}.lead{margin:11px 0 12px}.rules{padding:8px 11px}.quiz-topline{gap:12px}.timer{display:flex;align-items:center;gap:5px;color:#899395;font-size:11px;font-variant-numeric:tabular-nums}.result-time{margin-top:5px!important;font-size:11px!important;color:#9aa5a5!important}@media(max-width:680px){.intro{min-height:0;padding:28px 25px 14px}.intro h1{font-size:34px}.lead{margin:12px auto 14px}}
   </style>
 </head>
 <body>
@@ -27,10 +28,10 @@
     <section class="game-card" aria-labelledby="page-title">
       <div class="intro">
         <div class="intro-copy">
-          <p class="eyebrow">Játékos matek, vidám mancsok</p>
-          <h1 id="page-title">Indulhat a<br><span>szorzó-kaland?</span></h1>
-          <p class="lead">Segíts Pöttynek és Riónak gyakorolni! Most az <b>1–5-ös szorzótáblát</b> próbálhatod ki, egészen 10-ig.</p>
-          <div class="rules"><span>🧮</span><span><b>10 kérdés</b><i>•</i> 9 jó válaszért meglepetéskép jár!</span></div>
+          <p class="eyebrow">Pötty &amp; Rio matekkalandja</p>
+          <h1 id="page-title">Szorzó-<br><span>kaland!</span></h1>
+          <p class="lead"><b>1–5-ös szorzótábla</b>, egészen 10-ig.</p>
+          <div class="rules"><span>🧮</span><span><b>10 kérdés</b><i>•</i> 9 jó válasz = jutalomkép</span></div>
         </div>
         <div class="friends" aria-label="Pötty, a törpeuszkár, és Rio, a papagáj">
           <span class="sparkle sparkle-one">✦</span><span class="sparkle sparkle-two">✧</span>
@@ -45,12 +46,12 @@
       <div class="play-area" id="play-area">
         <div class="start-panel" id="start-panel">
           <div class="start-icon" aria-hidden="true">🎒</div>
-          <div><h2>Készen állsz?</h2><p>Válaszolj 10 szorzós kérdésre, és gyűjts legalább 9 pontot!</p></div>
+          <div><h2>Készen állsz?</h2><p>Segíts Pöttynek és Riónak!</p></div>
           <button class="primary-button" id="start-button" type="button">Játék indítása <span aria-hidden="true">→</span></button>
         </div>
 
         <div class="quiz-panel" id="quiz-panel" hidden>
-          <div class="quiz-topline"><span class="question-count" id="question-count">1. kérdés <span>/ 10</span></span><span class="score"><span aria-hidden="true">⭐</span> <span id="score">0</span> pont</span></div>
+          <div class="quiz-topline"><span class="question-count" id="question-count">1. kérdés <span>/ 10</span></span><span class="timer" aria-label="Eltelt idő"><span aria-hidden="true">⏱</span><span id="timer">0:00</span></span><span class="score"><span aria-hidden="true">⭐</span> <span id="score">0</span> pont</span></div>
           <div class="progress-track" role="progressbar" aria-label="Haladás" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0"><span id="progress-bar"></span></div>
           <form id="answer-form" autocomplete="off">
             <label class="question" for="answer"><span id="factor-a">3</span><span class="times">×</span><span id="factor-b">4</span><span class="equals">=</span><span class="answer-wrap"><input id="answer" name="answer" type="number" inputmode="numeric" aria-label="A szorzás eredménye" required></span></label>
@@ -62,7 +63,7 @@
 
         <div class="result-panel" id="result-panel" hidden aria-live="polite">
           <div class="result-emoji" id="result-emoji">🎉</div>
-          <div class="result-copy"><p class="eyebrow" id="result-eyebrow">Szuper munka!</p><h2 id="result-title">Megvan a jutalom!</h2><p id="result-message">Pötty és Rio nagyon büszkék rád.</p></div>
+          <div class="result-copy"><p class="eyebrow" id="result-eyebrow">Szuper munka!</p><h2 id="result-title">Megvan a jutalom!</h2><p id="result-message">Pötty és Rio nagyon büszkék rád.</p><p class="result-time" id="result-time"></p></div>
           <div class="reward" id="reward" hidden><img alt="A jutalomképed"><span>🎁 A mai meglepetésképed</span></div>
           <div class="result-actions"><button class="primary-button" id="again-button" type="button">Új kör <span aria-hidden="true">↻</span></button></div>
         </div>
@@ -119,6 +120,9 @@ const form = document.querySelector('#answer-form');
 const answerInput = document.querySelector('#answer');
 const feedback = document.querySelector('#feedback');
 const progress = document.querySelector('.progress-track');
+const timerOutput = document.querySelector('#timer');
+let timerInterval = null;
+let gameStartedAt = 0;
 
 let questions = [];
 let questionIndex = 0;
@@ -164,13 +168,25 @@ function startGame() {
   questions = makeQuestions();
   questionIndex = 0;
   score = 0;
+  window.clearInterval(timerInterval);
+  gameStartedAt = Date.now();
+  timerOutput.textContent = '0:00';
+  timerInterval = window.setInterval(updateTimer, 1000);
   startPanel.hidden = true;
   resultPanel.hidden = true;
   quizPanel.hidden = false;
   showQuestion();
 }
 
+function updateTimer() {
+  const seconds = Math.floor((Date.now() - gameStartedAt) / 1000);
+  const minutes = Math.floor(seconds / 60);
+  timerOutput.textContent = `${minutes}:${String(seconds % 60).padStart(2, '0')}`;
+}
+
 function finishGame() {
+  window.clearInterval(timerInterval);
+  updateTimer();
   quizPanel.hidden = true;
   resultPanel.hidden = false;
   const passed = score >= REWARD_THRESHOLD;
@@ -181,6 +197,7 @@ function finishGame() {
   document.querySelector('#result-message').textContent = passed
     ? `Remekeltél: ${score} helyes válasz a 10-ből. Pötty és Rio nagyon büszkék rád!`
     : `${score} helyes válaszod lett a 10-ből. Gyakorolj még egy kicsit, és próbáld újra!`;
+  document.querySelector('#result-time').textContent = `⏱ Idő: ${timerOutput.textContent}`;
   document.querySelector('#reward').hidden = !passed;
   if (passed) {
     const image = document.querySelector('#reward img');
