@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fff8ec">
-  <title>Pötty és Rio szorzóiskolája</title>
+  <title>Törpeuszkár szorzó-kaland</title>
   <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Nunito:wght@500;600;700;800;900&display=swap');
 
@@ -12,15 +12,15 @@
 @media(max-width:680px){.app-shell{width:min(100% - 22px,500px);padding-top:15px}.topbar{margin:0 4px 13px}.level-pill{font-size:10px;padding:8px 10px}.game-card{border-radius:22px}.intro{grid-template-columns:1fr;min-height:0;padding:28px 25px 14px}.intro-copy{text-align:center}.intro h1{font-size:34px}.lead{margin:12px auto 14px}.rules{justify-content:center}.friends{height:190px;margin-top:2px}.sun-disc{right:calc(50% - 95px);width:175px;height:175px}.friend-poodle{font-size:126px}.friend-parrot{font-size:76px;margin-left:-14px}.poodle-label{left:28%;bottom:1px}.parrot-label{right:20%;bottom:35px}.play-area{padding:16px 20px 18px;min-height:210px}.start-panel{grid-template-columns:46px 1fr;gap:11px;padding:16px;min-height:0}.start-icon{width:42px;height:42px;font-size:21px}.start-panel h2{font-size:16px}.start-panel p{font-size:11px}.start-panel .primary-button{grid-column:1/-1;width:100%}.question{font-size:36px;gap:9px}.answer-wrap{width:65px;height:53px}.result-panel{grid-template-columns:45px 1fr}.result-emoji{width:40px;height:40px}.reward{grid-column:1/-1}.result-actions{grid-column:1/-1}.result-actions button{width:100%}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
 
-  .intro{min-height:245px;padding-top:25px;padding-bottom:20px}.intro .eyebrow{margin-bottom:7px}.intro h1{font-size:43px}.lead{margin:11px 0 12px}.rules{padding:8px 11px}.quiz-topline{gap:12px}.timer{display:flex;align-items:center;gap:5px;color:#899395;font-size:11px;font-variant-numeric:tabular-nums}.result-time{margin-top:5px!important;font-size:11px!important;color:#9aa5a5!important}@media(max-width:680px){.intro{min-height:0;padding:28px 25px 14px}.intro h1{font-size:34px}.lead{margin:12px auto 14px}}
+  .intro{min-height:245px;padding-top:25px;padding-bottom:20px}.intro .eyebrow{margin-bottom:7px}.intro h1{font-size:43px}.lead{margin:11px 0 12px}.rules{padding:8px 11px}.quiz-topline{gap:12px}.timer{display:flex;align-items:center;gap:5px;color:#899395;font-size:11px;font-variant-numeric:tabular-nums}.result-time{margin-top:5px!important;font-size:11px!important;color:#9aa5a5!important}@media(max-width:680px){.intro{grid-template-columns:minmax(0,1fr) 125px;gap:0;min-height:0;padding:17px 15px 10px}.intro-copy{text-align:left}.intro .eyebrow{font-size:8px;letter-spacing:1px}.intro h1{font-size:27px}.lead{font-size:11px;margin:8px 0}.rules{gap:5px;padding:6px 7px;font-size:9px}.rules>span:first-child{font-size:14px}.friends{height:125px;margin:0}.sun-disc{right:calc(50% - 58px);bottom:3px;width:115px;height:115px}.friend-poodle{font-size:90px;transform:none}.page-note{display:none}.app-shell{padding-top:10px}}
   </style>
 </head>
 <body>
   <main class="app-shell">
     <header class="topbar">
-      <a class="brand" href="#" aria-label="Pötty és Rio szorzóiskolája – főoldal">
+      <a class="brand" href="#" aria-label="Törpeuszkár szorzó-kaland – főoldal">
         <span class="brand-mark" aria-hidden="true">🐩</span>
-        <span><strong>Pötty &amp; Rio</strong><small>szorzóiskolája</small></span>
+        <span><strong>Törpeuszkár</strong><small>szorzó-kaland</small></span>
       </a>
       <span class="level-pill"><span aria-hidden="true">🌟</span> Kezdő kaland</span>
     </header>
@@ -28,25 +28,22 @@
     <section class="game-card" aria-labelledby="page-title">
       <div class="intro">
         <div class="intro-copy">
-          <p class="eyebrow">Pötty &amp; Rio matekkalandja</p>
+          <p class="eyebrow">Vidám matekkaland</p>
           <h1 id="page-title">Szorzó-<br><span>kaland!</span></h1>
           <p class="lead"><b>1–5-ös szorzótábla</b>, egészen 10-ig.</p>
           <div class="rules"><span>🧮</span><span><b>10 kérdés</b><i>•</i> 9 jó válasz = jutalomkép</span></div>
         </div>
-        <div class="friends" aria-label="Pötty, a törpeuszkár, és Rio, a papagáj">
+        <div class="friends" aria-label="Egy kedves törpeuszkár">
           <span class="sparkle sparkle-one">✦</span><span class="sparkle sparkle-two">✧</span>
           <div class="sun-disc"></div>
           <span class="friend-poodle" aria-hidden="true">🐩</span>
-          <span class="friend-parrot" aria-hidden="true">🦜</span>
-          <span class="friend-label poodle-label">Pötty</span>
-          <span class="friend-label parrot-label">Rio</span>
         </div>
       </div>
 
       <div class="play-area" id="play-area">
         <div class="start-panel" id="start-panel">
           <div class="start-icon" aria-hidden="true">🎒</div>
-          <div><h2>Készen állsz?</h2><p>Segíts Pöttynek és Riónak!</p></div>
+          <div><h2>Készen állsz?</h2><p>Indulhat a játék?</p></div>
           <button class="primary-button" id="start-button" type="button">Játék indítása <span aria-hidden="true">→</span></button>
         </div>
 
@@ -58,17 +55,17 @@
             <p class="feedback" id="feedback" aria-live="polite">Írd be az eredményt!</p>
             <button class="primary-button submit-button" id="submit-button" type="submit">Ellenőrzöm <span aria-hidden="true">✓</span></button>
           </form>
-          <p class="cheer"><span aria-hidden="true">🐾</span> Pötty és Rio drukkol neked!</p>
+          <p class="cheer"><span aria-hidden="true">🐾</span> Hajrá, ügyes vagy!</p>
         </div>
 
         <div class="result-panel" id="result-panel" hidden aria-live="polite">
           <div class="result-emoji" id="result-emoji">🎉</div>
-          <div class="result-copy"><p class="eyebrow" id="result-eyebrow">Szuper munka!</p><h2 id="result-title">Megvan a jutalom!</h2><p id="result-message">Pötty és Rio nagyon büszkék rád.</p><p class="result-time" id="result-time"></p></div>
+          <div class="result-copy"><p class="eyebrow" id="result-eyebrow">Szuper munka!</p><h2 id="result-title">Megvan a jutalom!</h2><p id="result-message">A törpeuszkár nagyon büszke rád.</p><p class="result-time" id="result-time"></p></div>
           <div class="reward" id="reward" hidden><img alt="A jutalomképed"><span>🎁 A mai meglepetésképed</span></div>
           <div class="result-actions"><button class="primary-button" id="again-button" type="button">Új kör <span aria-hidden="true">↻</span></button></div>
         </div>
       </div>
-      <footer class="card-footer"><span>🐩</span> Törpeuszkáros és papagájos matekkaland <span class="footer-heart">♥</span></footer>
+      <footer class="card-footer"><span>🐩</span> Törpeuszkáros matekkaland <span class="footer-heart">♥</span></footer>
     </section>
     <p class="page-note">Kis lépések, nagy sikerek! <span aria-hidden="true">☀️</span></p>
   </main>
@@ -195,7 +192,7 @@ function finishGame() {
   document.querySelector('#result-eyebrow').className = `eyebrow ${passed ? 'success' : 'try-again'}`;
   document.querySelector('#result-title').textContent = passed ? 'Megvan a jutalom!' : 'Még egy kis gyakorlás!';
   document.querySelector('#result-message').textContent = passed
-    ? `Remekeltél: ${score} helyes válasz a 10-ből. Pötty és Rio nagyon büszkék rád!`
+    ? `Remekeltél: ${score} helyes válasz a 10-ből. A törpeuszkár büszke rád!`
     : `${score} helyes válaszod lett a 10-ből. Gyakorolj még egy kicsit, és próbáld újra!`;
   document.querySelector('#result-time').textContent = `⏱ Idő: ${timerOutput.textContent}`;
   document.querySelector('#reward').hidden = !passed;
