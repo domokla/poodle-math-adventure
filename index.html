@@ -17,14 +17,6 @@
 </head>
 <body>
   <main class="app-shell">
-    <header class="topbar">
-      <a class="brand" href="#" aria-label="Törpeuszkár szorzó-kaland – főoldal">
-        <span class="brand-mark" aria-hidden="true">🐩</span>
-        <span><strong>Törpeuszkár</strong><small>szorzó-kaland</small></span>
-      </a>
-      <span class="level-pill"><span aria-hidden="true">🌟</span> Kezdő kaland</span>
-    </header>
-
     <section class="game-card" aria-labelledby="page-title">
       <div class="intro">
         <div class="intro-copy">
@@ -62,7 +54,6 @@
           <div class="result-emoji" id="result-emoji">🎉</div>
           <div class="result-copy"><p class="eyebrow" id="result-eyebrow">Szuper munka!</p><h2 id="result-title">Megvan a jutalom!</h2><p id="result-message">A törpeuszkár nagyon büszke rád.</p><p class="result-time" id="result-time"></p></div>
           <div class="reward" id="reward" hidden><img alt="A jutalomképed"><span>🎁 A mai meglepetésképed</span></div>
-          <div class="result-actions"><button class="primary-button" id="again-button" type="button">Új kör <span aria-hidden="true">↻</span></button></div>
         </div>
       </div>
       <footer class="card-footer"><span>🐩</span> Törpeuszkáros matekkaland <span class="footer-heart">♥</span></footer>
@@ -234,8 +225,6 @@ form.addEventListener('submit', (event) => {
 });
 
 document.querySelector('#start-button').addEventListener('click', startGame);
-document.querySelector('#again-button').addEventListener('click', startGame);
-
   </script>
 </body>
 </html>
