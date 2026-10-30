@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8ec">
+  <title>Pötty és Rio szorzóiskolája</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Nunito:wght@500;600;700;800;900&display=swap');
+
+:root{font-family:'DM Sans',sans-serif;color:#243846;background:#fff8ec;font-synthesis:none;text-rendering:optimizeLegibility}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 12% 12%,#fff 0,transparent 27%),radial-gradient(ellipse at 90% 82%,#fce5d3 0,transparent 26%),#fff8ec}.app-shell{width:min(100% - 36px,940px);margin:0 auto;padding:25px 0 18px}.topbar{display:flex;align-items:center;justify-content:space-between;margin:0 10px 22px}.brand{display:flex;align-items:center;gap:10px;color:inherit;text-decoration:none}.brand-mark{display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:#fff;box-shadow:0 5px 16px #593c2010;font-size:25px}.brand strong,.brand small{display:block}.brand strong{font-family:Nunito,sans-serif;font-size:16px;font-weight:900;letter-spacing:-.3px}.brand small{margin-top:1px;color:#86969b;font-size:11px;font-weight:600;letter-spacing:.5px}.level-pill{display:flex;align-items:center;gap:7px;padding:9px 14px;background:#fff;border:1px solid #f3ebdf;border-radius:99px;color:#61737a;font-size:12px;font-weight:700}.game-card{overflow:hidden;background:#fff;border:1px solid #f2eadf;border-radius:28px;box-shadow:0 22px 65px #60472912}.intro{display:grid;grid-template-columns:1.07fr .93fr;align-items:center;min-height:287px;padding:36px 62px 30px;background:linear-gradient(110deg,#fffaf3,#fff5e9)}.eyebrow{text-transform:uppercase;letter-spacing:1.6px;color:#df956c;font-size:10px;font-weight:800}.intro .eyebrow{margin:0 0 8px}.intro h1{margin:0;font-family:Nunito,sans-serif;font-weight:900;font-size:39px;line-height:1.03;letter-spacing:-1.6px;color:#283c48}.intro h1 span{color:#e8845f}.lead{max-width:365px;margin:14px 0 17px;color:#718087;font-size:13px;line-height:1.65}.lead b{color:#435962}.rules{display:inline-flex;align-items:center;gap:9px;padding:9px 12px;background:#fff;border:1px solid #f2e9df;border-radius:12px;color:#6d7d80;font-size:11px}.rules>span:first-child{font-size:18px}.rules b{color:#455c62}.rules i{padding:0 5px;color:#e89777;font-style:normal}.friends{position:relative;display:flex;align-items:flex-end;justify-content:center;height:225px}.sun-disc{position:absolute;right:14%;bottom:11px;width:200px;height:200px;border-radius:50%;background:#ffe6bd}.friend-poodle,.friend-parrot{position:relative;filter:drop-shadow(0 8px 7px #61401c1c);line-height:1}.friend-poodle{z-index:2;font-size:148px;transform:translate(5px,0)}.friend-parrot{z-index:3;margin:0 0 24px -17px;font-size:90px;transform:rotate(-8deg)}.friend-label{position:absolute;z-index:4;padding:5px 10px;background:white;border-radius:99px;color:#53656a;font-size:10px;font-weight:800;box-shadow:0 4px 10px #593c2010}.poodle-label{bottom:5px;left:23%}.parrot-label{right:10%;bottom:45px}.sparkle{position:absolute;color:#e8ad52;font-size:26px}.sparkle-one{top:24px;right:23%}.sparkle-two{top:76px;left:19%;font-size:20px}.play-area{min-height:230px;padding:22px 62px 19px}.start-panel{display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:14px;min-height:132px;padding:21px 23px;background:#fbfcfa;border:1px solid #edf1eb;border-radius:19px}.start-icon{display:grid;place-items:center;width:48px;height:48px;border-radius:15px;background:#edf5ee;font-size:24px}.start-panel h2,.result-panel h2{margin:0 0 4px;font-family:Nunito,sans-serif;font-size:18px;font-weight:900;letter-spacing:-.3px}.start-panel p,.result-panel .result-copy>p:last-child{margin:0;color:#829095;font-size:12px;line-height:1.55}.primary-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:43px;padding:0 17px;border:0;border-radius:12px;background:#e98661;color:white;font:700 12px 'DM Sans',sans-serif;cursor:pointer;box-shadow:0 5px 12px #df805134;transition:transform .16s,background .16s,box-shadow .16s}.primary-button:hover{transform:translateY(-1px);background:#dc7551;box-shadow:0 8px 18px #df805144}.primary-button:focus-visible,input:focus-visible{outline:3px solid #f5bb91;outline-offset:3px}.primary-button span{font-size:16px}.quiz-panel{max-width:510px;margin:0 auto}.quiz-topline{display:flex;justify-content:space-between;align-items:center;color:#4f656c;font-size:12px;font-weight:800}.question-count span{color:#a1abad;font-weight:600}.score{display:flex;align-items:center;gap:5px;color:#899395;font-size:11px}.score span:first-child{color:#edb647;font-size:15px}.progress-track{height:7px;margin:11px 0 13px;overflow:hidden;border-radius:9px;background:#f2f2ee}.progress-track span{display:block;width:0;height:100%;border-radius:inherit;background:linear-gradient(90deg,#94c9a3,#c5d979);transition:width .25s}.question{display:flex;align-items:center;justify-content:center;gap:13px;font:900 41px Nunito,sans-serif;color:#314750}.times,.equals{color:#b6c1be;font-size:28px}.answer-wrap{display:grid;place-items:center;width:72px;height:57px;border:2px solid #e1ede3;border-radius:14px;background:#fbfefb}.answer-wrap input{width:100%;height:100%;border:0;outline:0;background:transparent;text-align:center;color:#375b49;font:900 30px Nunito,sans-serif}.feedback{min-height:19px;margin:5px 0 8px;text-align:center;color:#9aa5a5;font-size:11px}.feedback.good{color:#559c68;font-weight:700}.feedback.bad{color:#d97859;font-weight:700}.submit-button{display:flex;min-width:150px;margin:0 auto}.cheer{margin:13px 0 0;text-align:center;color:#a0aaaa;font-size:10px}.cheer span{margin-right:4px}.result-panel{display:grid;grid-template-columns:55px 1fr;align-items:center;gap:10px}.result-emoji{grid-row:1;display:grid;place-items:center;width:48px;height:48px;border-radius:15px;background:#fff4df;font-size:25px}.result-copy .eyebrow{margin:0 0 4px}.result-copy h2{font-size:20px}.result-copy .eyebrow.success{color:#61a775}.result-copy .eyebrow.try-again{color:#df956c}.reward{grid-column:2;margin-top:8px}.reward img{display:block;width:min(100%,360px);max-height:155px;object-fit:cover;border:4px solid white;border-radius:14px;box-shadow:0 5px 18px #41432920}.reward span{display:block;margin-top:6px;color:#83918e;font-size:10px;font-weight:700}.result-actions{grid-column:2;margin-top:12px}.result-panel:has(.reward:not([hidden])){grid-template-columns:55px 1fr}.card-footer{display:flex;align-items:center;justify-content:center;gap:7px;padding:12px;border-top:1px solid #f2eee7;color:#a3aaa7;font-size:10px;font-weight:600}.card-footer>span:first-child{font-size:14px}.footer-heart{color:#e99c79}.page-note{margin:17px 0 0;text-align:center;color:#b1aaa0;font-size:11px}.page-note span{margin-left:4px}
+@media(max-width:680px){.app-shell{width:min(100% - 22px,500px);padding-top:15px}.topbar{margin:0 4px 13px}.level-pill{font-size:10px;padding:8px 10px}.game-card{border-radius:22px}.intro{grid-template-columns:1fr;min-height:0;padding:28px 25px 14px}.intro-copy{text-align:center}.intro h1{font-size:34px}.lead{margin:12px auto 14px}.rules{justify-content:center}.friends{height:190px;margin-top:2px}.sun-disc{right:calc(50% - 95px);width:175px;height:175px}.friend-poodle{font-size:126px}.friend-parrot{font-size:76px;margin-left:-14px}.poodle-label{left:28%;bottom:1px}.parrot-label{right:20%;bottom:35px}.play-area{padding:16px 20px 18px;min-height:210px}.start-panel{grid-template-columns:46px 1fr;gap:11px;padding:16px;min-height:0}.start-icon{width:42px;height:42px;font-size:21px}.start-panel h2{font-size:16px}.start-panel p{font-size:11px}.start-panel .primary-button{grid-column:1/-1;width:100%}.question{font-size:36px;gap:9px}.answer-wrap{width:65px;height:53px}.result-panel{grid-template-columns:45px 1fr}.result-emoji{width:40px;height:40px}.reward{grid-column:1/-1}.result-actions{grid-column:1/-1}.result-actions button{width:100%}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+
+  </style>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Pötty és Rio szorzóiskolája – főoldal">
+        <span class="brand-mark" aria-hidden="true">🐩</span>
+        <span><strong>Pötty &amp; Rio</strong><small>szorzóiskolája</small></span>
+      </a>
+      <span class="level-pill"><span aria-hidden="true">🌟</span> Kezdő kaland</span>
+    </header>
+
+    <section class="game-card" aria-labelledby="page-title">
+      <div class="intro">
+        <div class="intro-copy">
+          <p class="eyebrow">Játékos matek, vidám mancsok</p>
+          <h1 id="page-title">Indulhat a<br><span>szorzó-kaland?</span></h1>
+          <p class="lead">Segíts Pöttynek és Riónak gyakorolni! Most az <b>1–5-ös szorzótáblát</b> próbálhatod ki, egészen 10-ig.</p>
+          <div class="rules"><span>🧮</span><span><b>10 kérdés</b><i>•</i> 9 jó válaszért meglepetéskép jár!</span></div>
+        </div>
+        <div class="friends" aria-label="Pötty, a törpeuszkár, és Rio, a papagáj">
+          <span class="sparkle sparkle-one">✦</span><span class="sparkle sparkle-two">✧</span>
+          <div class="sun-disc"></div>
+          <span class="friend-poodle" aria-hidden="true">🐩</span>
+          <span class="friend-parrot" aria-hidden="true">🦜</span>
+          <span class="friend-label poodle-label">Pötty</span>
+          <span class="friend-label parrot-label">Rio</span>
+        </div>
+      </div>
+
+      <div class="play-area" id="play-area">
+        <div class="start-panel" id="start-panel">
+          <div class="start-icon" aria-hidden="true">🎒</div>
+          <div><h2>Készen állsz?</h2><p>Válaszolj 10 szorzós kérdésre, és gyűjts legalább 9 pontot!</p></div>
+          <button class="primary-button" id="start-button" type="button">Játék indítása <span aria-hidden="true">→</span></button>
+        </div>
+
+        <div class="quiz-panel" id="quiz-panel" hidden>
+          <div class="quiz-topline"><span class="question-count" id="question-count">1. kérdés <span>/ 10</span></span><span class="score"><span aria-hidden="true">⭐</span> <span id="score">0</span> pont</span></div>
+          <div class="progress-track" role="progressbar" aria-label="Haladás" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0"><span id="progress-bar"></span></div>
+          <form id="answer-form" autocomplete="off">
+            <label class="question" for="answer"><span id="factor-a">3</span><span class="times">×</span><span id="factor-b">4</span><span class="equals">=</span><span class="answer-wrap"><input id="answer" name="answer" type="number" inputmode="numeric" aria-label="A szorzás eredménye" required></span></label>
+            <p class="feedback" id="feedback" aria-live="polite">Írd be az eredményt!</p>
+            <button class="primary-button submit-button" id="submit-button" type="submit">Ellenőrzöm <span aria-hidden="true">✓</span></button>
+          </form>
+          <p class="cheer"><span aria-hidden="true">🐾</span> Pötty és Rio drukkol neked!</p>
+        </div>
+
+        <div class="result-panel" id="result-panel" hidden aria-live="polite">
+          <div class="result-emoji" id="result-emoji">🎉</div>
+          <div class="result-copy"><p class="eyebrow" id="result-eyebrow">Szuper munka!</p><h2 id="result-title">Megvan a jutalom!</h2><p id="result-message">Pötty és Rio nagyon büszkék rád.</p></div>
+          <div class="reward" id="reward" hidden><img alt="A jutalomképed"><span>🎁 A mai meglepetésképed</span></div>
+          <div class="result-actions"><button class="primary-button" id="again-button" type="button">Új kör <span aria-hidden="true">↻</span></button></div>
+        </div>
+      </div>
+      <footer class="card-footer"><span>🐩</span> Törpeuszkáros és papagájos matekkaland <span class="footer-heart">♥</span></footer>
+    </section>
+    <p class="page-note">Kis lépések, nagy sikerek! <span aria-hidden="true">☀️</span></p>
+  </main>
+  <script>
+const TOTAL_QUESTIONS = 10;
+const REWARD_THRESHOLD = 9;
+// A mappa tartalmát megpróbáljuk automatikusan beolvasni.
+let REWARD_IMAGES = [];
+
+async function discoverRewardImages() {
+  const isImage = /\.(?:avif|gif|jpe?g|png|webp)$/i;
+  try {
+    const response = await fetch('images/');
+    if (response.ok) {
+      const html = await response.text();
+      const links = [...html.matchAll(/href=["']([^"']+)["']/gi)].map(match => match[1]);
+      REWARD_IMAGES = [...new Set(links.map(link => {
+        try { return new URL(link, new URL('images/', location.href)).href; } catch { return ''; }
+      }).filter(url => {
+        try {
+          const parsed = new URL(url);
+          return parsed.origin === location.origin && parsed.pathname.includes('/images/') && isImage.test(parsed.pathname);
+        } catch { return false; }
+      }))];
+    }
+  } catch { /* Static hosts and file:// may not expose folder listings. */ }
+  // Fallback for static hosting: automatically find images named pic-1, pic-2, etc.
+  if (!REWARD_IMAGES.length) {
+    const candidates = [];
+    const extensions = ['jpeg', 'jpg', 'png', 'webp', 'gif', 'avif'];
+    for (let number = 1; number <= 30; number += 1) {
+      for (const extension of extensions) candidates.push('images/pic-' + number + '.' + extension);
+    }
+    const checks = await Promise.all(candidates.map(src => new Promise(resolve => {
+      const image = new Image();
+      image.onload = () => resolve(src);
+      image.onerror = () => resolve(null);
+      image.src = src;
+    })));
+    REWARD_IMAGES = checks.filter(Boolean);
+  }
+}
+discoverRewardImages();
+
+const startPanel = document.querySelector('#start-panel');
+const quizPanel = document.querySelector('#quiz-panel');
+const resultPanel = document.querySelector('#result-panel');
+const form = document.querySelector('#answer-form');
+const answerInput = document.querySelector('#answer');
+const feedback = document.querySelector('#feedback');
+const progress = document.querySelector('.progress-track');
+
+let questions = [];
+let questionIndex = 0;
+let score = 0;
+let locked = false;
+
+function makeQuestions() {
+  // Shuffle all 50 allowed facts so each round is varied and contains no 6× facts.
+  const facts = [];
+  for (let a = 1; a <= 5; a += 1) {
+    for (let b = 1; b <= 10; b += 1) facts.push([a, b]);
+  }
+  for (let i = facts.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [facts[i], facts[j]] = [facts[j], facts[i]];
+  }
+  return facts.slice(0, TOTAL_QUESTIONS);
+}
+
+function updateProgress() {
+  const completed = questionIndex;
+  document.querySelector('#question-count').innerHTML = `${Math.min(completed + 1, TOTAL_QUESTIONS)}. kérdés <span>/ ${TOTAL_QUESTIONS}</span>`;
+  document.querySelector('#score').textContent = score;
+  document.querySelector('#progress-bar').style.width = `${(completed / TOTAL_QUESTIONS) * 100}%`;
+  progress.setAttribute('aria-valuenow', completed);
+}
+
+function showQuestion() {
+  const [a, b] = questions[questionIndex];
+  document.querySelector('#factor-a').textContent = a;
+  document.querySelector('#factor-b').textContent = b;
+  answerInput.value = '';
+  answerInput.disabled = false;
+  locked = false;
+  feedback.textContent = 'Írd be az eredményt!';
+  feedback.className = 'feedback';
+  document.querySelector('#submit-button').textContent = 'Ellenőrzöm ✓';
+  updateProgress();
+  answerInput.focus({ preventScroll: true });
+}
+
+function startGame() {
+  questions = makeQuestions();
+  questionIndex = 0;
+  score = 0;
+  startPanel.hidden = true;
+  resultPanel.hidden = true;
+  quizPanel.hidden = false;
+  showQuestion();
+}
+
+function finishGame() {
+  quizPanel.hidden = true;
+  resultPanel.hidden = false;
+  const passed = score >= REWARD_THRESHOLD;
+  document.querySelector('#result-emoji').textContent = passed ? '🎉' : '💪';
+  document.querySelector('#result-eyebrow').textContent = passed ? 'Szuper munka!' : 'Szép próbálkozás!';
+  document.querySelector('#result-eyebrow').className = `eyebrow ${passed ? 'success' : 'try-again'}`;
+  document.querySelector('#result-title').textContent = passed ? 'Megvan a jutalom!' : 'Még egy kis gyakorlás!';
+  document.querySelector('#result-message').textContent = passed
+    ? `Remekeltél: ${score} helyes válasz a 10-ből. Pötty és Rio nagyon büszkék rád!`
+    : `${score} helyes válaszod lett a 10-ből. Gyakorolj még egy kicsit, és próbáld újra!`;
+  document.querySelector('#reward').hidden = !passed;
+  if (passed) {
+    const image = document.querySelector('#reward img');
+    if (!REWARD_IMAGES.length) {
+      image.hidden = true;
+      document.querySelector('#reward span').textContent = 'A jutalomkép most nem érhető el.';
+    } else {
+      image.hidden = false;
+      const rewardImage = REWARD_IMAGES[Math.floor(Math.random() * REWARD_IMAGES.length)];
+      image.src = rewardImage;
+      image.alt = 'Jutalomkép: ' + rewardImage.split('/').pop();
+      document.querySelector('#reward span').textContent = '🎁 A mai meglepetésképed';
+    }
+  }
+  document.querySelector('#progress-bar').style.width = '100%';
+  progress.setAttribute('aria-valuenow', TOTAL_QUESTIONS);
+}
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  if (locked || answerInput.value.trim() === '') return;
+  locked = true;
+  answerInput.disabled = true;
+  const [a, b] = questions[questionIndex];
+  const correct = Number(answerInput.value) === a * b;
+  if (correct) score += 1;
+  feedback.textContent = correct ? 'Így van! Ügyes vagy! 🐾' : `A helyes válasz: ${a * b}. Legközelebb sikerül!`;
+  feedback.className = `feedback ${correct ? 'good' : 'bad'}`;
+  document.querySelector('#score').textContent = score;
+  document.querySelector('#submit-button').textContent = questionIndex === TOTAL_QUESTIONS - 1 ? 'Eredmény' : 'Következő →';
+
+  window.setTimeout(() => {
+    questionIndex += 1;
+    if (questionIndex >= TOTAL_QUESTIONS) finishGame();
+    else showQuestion();
+  }, 850);
+});
+
+document.querySelector('#start-button').addEventListener('click', startGame);
+document.querySelector('#again-button').addEventListener('click', startGame);
+
+  </script>
+</body>
+</html>
