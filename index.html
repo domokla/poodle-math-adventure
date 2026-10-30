@@ -43,7 +43,7 @@
           <div class="quiz-topline"><span class="question-count" id="question-count">1. kérdés <span>/ 10</span></span><span class="timer" aria-label="Eltelt idő"><span aria-hidden="true">⏱</span><span id="timer">0:00</span></span><span class="score"><span aria-hidden="true">⭐</span> <span id="score">0</span> pont</span></div>
           <div class="progress-track" role="progressbar" aria-label="Haladás" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0"><span id="progress-bar"></span></div>
           <form id="answer-form" autocomplete="off">
-            <label class="question" for="answer"><span id="factor-a">3</span><span class="times">×</span><span id="factor-b">4</span><span class="equals">=</span><span class="answer-wrap"><input id="answer" name="answer" type="number" inputmode="numeric" aria-label="A szorzás eredménye" required></span></label>
+            <label class="question" for="answer"><span id="factor-a">3</span><span class="times">×</span><span id="factor-b">4</span><span class="equals">=</span><span class="answer-wrap"><input id="answer" name="answer" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" aria-label="A szorzás eredménye" required></span></label>
             <p class="feedback" id="feedback" aria-live="polite">Írd be az eredményt!</p>
             <button class="primary-button submit-button" id="submit-button" type="submit">Ellenőrzöm <span aria-hidden="true">✓</span></button>
           </form>
@@ -156,6 +156,10 @@ function startGame() {
   questions = makeQuestions();
   questionIndex = 0;
   score = 0;
+  document.querySelector('#reward').hidden = true;
+  document.querySelector('#reward img').removeAttribute('src');
+  document.querySelector('#reward img').hidden = false;
+  document.querySelector('#reward span').textContent = '🎁 A mai meglepetésképed';
   window.clearInterval(timerInterval);
   gameStartedAt = Date.now();
   timerOutput.textContent = '0:00';
